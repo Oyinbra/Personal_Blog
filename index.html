@@ -6,63 +6,130 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!--FONT AWESOME SCRIPT-->
-    <script src="https://kit.fontawesome.com/8a514bf435.js" crossorigin="anonymous"></script>
+    <!-- BOX ICON -->
+    <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="" stylesheet>
 
     <!-- CSS FILE LINK  -->
     <link rel="stylesheet" href="css/style.css">
 
     <!-- FAVICON LINK -->
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 </head>
 
 <body>
 
     <!-- HEADER SECTION STARTS  -->
     <header class="header">
+        <!-- Nav -->
+        <div class="nav container">
+            <!-- Logo -->
+            <a href="#" class="logo">Oyin<span>bra</span></a>
+            <!-- Login button -->
+            <a href="#" class="login">Login</a>
 
     </header>
-
     <!-- HEADER SECTION ENDS  -->
-
-    <!-- hamburger menu -->
-    <div id="menu-btn" class="fas fa-bars"></div>
-
-    <!-- theme toggle -->
-    <div id="theme-toggler" class="fas fa-sun"></div>
 
     <!-- HOME SECTION STARTS  -->
     <section class="home" id="home">
-
+        <div class="home-text" id="container">
+            <h2 class="home-title">Oyinbra's Blog</h2>
+            <span class="home-subtilte">Unlocking Tech's Wonders</span>
+        </div>
     </section>
     <!-- HOME SECTION ENDS  -->
 
-    <!-- ABOUT SECTION STARTS  -->
-    <section class="about" id="about">
-
+    <!-- POST FILTER SECTION STARTS  -->
+    <section class="post-filter container">
+        <span class="filter-item active-filter" data-filter="all">All</span>
+        <span class="filter-item" data-filter="tech">Tech</span>
+        <span class="filter-item" data-filter="linux">Linux</span>
+        <span class="filter-item" data-filter="web3">Web 3</span>
+        <span class="filter-item" data-filter="mobile">Mobile</span>
+        <span class="filter-item" data-filter="design">Design</span>
     </section>
-    <!-- ABOUT SECTION ENDS  -->
+    <!-- POST FILTER SECTION ENDS  -->
 
-    <!-- SERVICES SECTION STARTS  -->
-    <section class="services" id="services">
+    <!-- POST SECTION STARTS  -->
+    <section class="post container">
+        
+        <!-- Post Box 1 -->
+        <div class="post-box mobile">
+            <img src="img/post-1.png" alt="" class="post-img">
+            <h2 class="category">Mobile</h2>
+            <a href="post-page.html" class="post-title">
+                How to create Best UI Designs for Linux Applications
+            </a>
+            <span class="post-date">September 23, 2023</span>
+            <p class="post-description"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora est, totam inventore eius soluta nesciunt in quae necessitatibus nostrum voluptatum architecto repellendus? Ipsa enim quae amet aperiam beatae ducimus neque?</p>
+            <!-- Profile -->
+            <div class="profile">
+                <img src="img/profile/profile-1.jpg" alt="" class="profile-img">
+                <span class="profile-name">Oyinbra</span>
+            </div>
+        </div>
 
+        <!-- Post Box 2 -->
+        <div class="post-box tech">
+            <img src="img/post-2.png" alt="" class="post-img">
+            <h2 class="category">Tech</h2>
+            <a href="post-page.html" class="post-title">
+                How to create Best UI Designs for Linux Applications
+            </a>
+            <span class="post-date">September 23, 2023</span>
+            <p class="post-description"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora est, totam inventore eius soluta nesciunt in quae necessitatibus nostrum voluptatum architecto repellendus? Ipsa enim quae amet aperiam beatae ducimus neque?</p>
+            <!-- Profile -->
+            <div class="profile">
+                <img src="img/profile/profile-1.jpg" alt="" class="profile-img">
+                <span class="profile-name">Oyinbra</span>
+            </div>
+        </div>
+
+        <!-- Post Box 3 -->
+        <div class="post-box mobile">
+            <img src="img/post-3.png" alt="" class="post-img">
+            <h2 class="category">Mobile</h2>
+            <a href="post-page.html" class="post-title">
+                How to create Best UI Designs for Linux Applications
+            </a>
+            <span class="post-date">September 23, 2023</span>
+            <p class="post-description"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora est, totam inventore eius soluta nesciunt in quae necessitatibus nostrum voluptatum architecto repellendus? Ipsa enim quae amet aperiam beatae ducimus neque?</p>
+            <!-- Profile -->
+            <div class="profile">
+                <img src="img/profile/profile-1.jpg" alt="" class="profile-img">
+                <span class="profile-name">Oyinbra</span>
+            </div>
+        </div>
+
+        <!-- Post Box 4 -->
+        <div class="post-box mobile">
+            <img src="img/post-4.png" alt="" class="post-img">
+            <h2 class="category">Mobile</h2>
+            <a href="post-page.html" class="post-title">
+                How to create Best UI Designs for Linux Applications
+            </a>
+            <span class="post-date">September 23, 2023</span>
+            <p class="post-description"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora est, totam inventore eius soluta nesciunt in quae necessitatibus nostrum voluptatum architecto repellendus? Ipsa enim quae amet aperiam beatae ducimus neque?</p>
+            <!-- Profile -->
+            <div class="profile">
+                <img src="img/profile/profile-1.jpg" alt="" class="profile-img">
+                <span class="profile-name">Oyinbra</span>
+            </div>
+        </div>
     </section>
-    <!-- SERVICES SECTION ENDS  -->
+    <!-- POST SECTION ENDS  -->
 
-    <!-- PORTFOLIO SECTION STARTS  -->
-    <section class="portfolio" id="portfolio">
-
-    </section>
-    <!-- PORTFOLIO SECTION ENDS  -->
-
-
-    <!-- CONTACT SECTION STARTS  -->
-
-    <section class="contact" id="contact">
-
-    </section>
-    <!-- CONTACT SECTION ENDS  -->
-
+    <!-- FOOTER SECTION STARTS  -->
+    <div class="footer container">
+        <p>&#169; Oyinbra'S Blog: All Rights Reserved</p>
+        <div class="social">
+            <a href="#"><i class="bx bx1-twitter"></i></a>
+            <a href="#"><i class="bx bx1-linkedin"></i></a>
+            <a href="#"><i class="bx bx1-facebook"></i></a>
+            <a href="#"><i class="bx bx1-instagram"></i></a>
+        </div>
+    </div>
+    <!-- FOOTER SECTION ENDS  -->
 
     <!-- JQUERY CDN LINK  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
