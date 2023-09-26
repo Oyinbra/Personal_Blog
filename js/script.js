@@ -22,3 +22,15 @@ let header = document.querySelector("header");
 window.addEventListener("scroll", () => {
   header.classList.toggle("shadow", window.scrollY > 0);
 })
+
+// COPY TO CLIPBOARD
+function copyToClipboard() {
+  const codeBlock = document.querySelector(".code-container code");
+  const textArea = document.createElement("textarea");
+  textArea.value = codeBlock.textContent;
+  document.body.appendChild(textArea);
+  textArea.select();
+  document.execCommand("copy");
+  document.body.removeChild(textArea);
+  alert("Code copied to clipboard!");
+}
