@@ -26,7 +26,13 @@
       <a href="../index.html" class="logo">Oyin<span>bra</span></a>
       <!-- Login button -->
       <!-- <a href="#" class="btn">Login</a> -->
-      <a href="../index.html" class="back-home btn">Back to home</a>
+
+      <div class="social">
+        <a href="https://www.linkedin.com/in/oyinbra" target="_blank"><i class='bx bxl-linkedin-square'></i></a>
+        <a href="https://github.com/oyinbra" target="_blank"><i class='bx bxl-github'></i></a>
+        <a href="https://www.facebook.com/oyinbra" target="_blank"><i class='bx bxl-facebook-square'></i></a>
+        <a href="https://www.instagram.com/oyinbra" target="_blank"><i class='bx bxl-instagram'></i></a>
+      </div>
 
 
   </header>
@@ -51,7 +57,8 @@
 
     <p>The Linux terminal is a powerful tool that can significantly enhance your coding experience. Whether you're a
       seasoned developer or just getting started, mastering the terminal can streamline your workflow and make you more
-      efficient. In this blog post, we'll explore the basics of the Linux terminal and dive into the world of aliases – a
+      efficient. In this blog post, we'll explore the basics of the Linux terminal and dive into the world of aliases –
+      a
       feature that can supercharge your productivity.</p>
 
     <h3>The Linux Terminal: Your Coding Companion</h3>
@@ -94,19 +101,23 @@
       <li><strong><code>cp</code></strong>: Copy files and directories.</li>
       <li><strong><code>mv</code></strong>: Move or rename files and directories.</li>
       <li><strong><code>rm</code></strong>: Remove files and directories (be cautious with this one).</li>
-  </ul>
+    </ul>
 
     <h3>Supercharge Your Terminal with Aliases</h3>
 
     <p>Aliases are shortcuts or abbreviations for longer commands. They allow you to create your own custom commands,
-      making your terminal experience more efficient. Let's dive into how to create and use aliases for <code>.bashrc</code> and <code>.zshrc</code>:</p>
+      making your terminal experience more efficient. Let's dive into how to create and use aliases for
+      <code>.bashrc</code> and <code>.zshrc</code>:
+    </p>
 
     <h4>Creating Aliases in .bashrc or .zshrc</h4>
 
     <ol>
       <li>Open your terminal and navigate to your home directory (<code>cd ~</code>).</li>
-      <li>Open the <code>.bashrc</code> or <code>.zshrc</code> file in a text editor using a command like <code>nano</code>, <code>vim</code>,
-        or any text editor you prefer.</li>
+      <li>Open the <code>.bashrc</code> or <code>.zshrc</code> file in a text editor using a command like
+        <code>nano</code>, <code>vim</code>,
+        or any text editor you prefer.
+      </li>
       <li>Add your aliases in the following format at the end of the file:
         <pre><code>alias alias_name='command_to_be_aliased'</code></pre>
         For example, to create an alias for clearing the terminal screen:
@@ -114,7 +125,9 @@
       </li>
     </ol>
 
-    <p>Save the file, exit the editor and close the terminal. The source your <code>.bashrc</code> or <code>.zshrc</code> from the terminal using <code>source ~/path/to/file</code> </p>
+    <p>Save the file, exit the editor and close the terminal. The source your <code>.bashrc</code> or
+      <code>.zshrc</code> from the terminal using <code>source ~/path/to/file</code>
+    </p>
 
     <h4 class="pt-1">Using Aliases:</h4>
 
@@ -177,17 +190,11 @@
 
   <!-- POSTS SECTION ENDS  -->
 
-<!-- FOOTER SECTION STARTS  -->
-<div class="footer container">
-  <p>&#169; Oyinbra'S Blog: All Rights Reserved</p>
-  <div class="social">
-      <a href="https://www.linkedin.com/in/oyinbra" target="_blank"><i class='bx bxl-linkedin-square'></i></a>
-      <a href="https://github.com/oyinbra" target="_blank"><i class='bx bxl-github'></i></a>
-      <a href="https://www.facebook.com/oyinbra" target="_blank"><i class='bx bxl-facebook-square'></i></a>
-      <a href="https://www.instagram.com/oyinbra" target="_blank"><i class='bx bxl-instagram'></i></a>
+  <!-- FOOTER SECTION STARTS  -->
+  <div class="footer-post container">
+    <a href="../index.html" class="back-home btn">Back to home</a>
   </div>
-</div>
-<!-- FOOTER SECTION ENDS  -->
+  <!-- FOOTER SECTION ENDS  -->
 
   <!-- JQUERY CDN LINK  -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
