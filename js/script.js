@@ -34,16 +34,3 @@ function copyToClipboard() {
   document.body.removeChild(textArea);
   alert("Code copied to clipboard!");
 }
-
-document.addEventListener("DOMContentLoaded", function () {
-  const postLinks = document.querySelectorAll(".post-link");
-  postLinks.forEach(function (link) {
-      const postTitle = link.innerText;
-      const formattedTitle = postTitle
-          .toLowerCase()
-          .replace(/ /g, "-")
-          .replace(/[^a-z0-9-]/g, "");
-      link.href = `./post/${formattedTitle}.html`;
-  });
-});
-
