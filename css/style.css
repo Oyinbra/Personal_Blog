@@ -15,18 +15,43 @@
 
 /* Utility */
 /* Padding top and bottom */
-.py-1 {padding: 1rem 0;}
-.py-2 {padding: 2rem 0;}
-.py-3 {padding: 3rem 0;}
+.py-1 {
+    padding: 1rem 0;
+}
+
+.py-2 {
+    padding: 2rem 0;
+}
+
+.py-3 {
+    padding: 3rem 0;
+}
 
 /* Padding top */
-.pt-1 {padding-top: 1rem}
-.pt-2 {padding-top: 2rem}
-.pt-3 {padding-top: 3rem}
+.pt-1 {
+    padding-top: 1rem
+}
+
+.pt-2 {
+    padding-top: 2rem
+}
+
+.pt-3 {
+    padding-top: 3rem
+}
+
 /* Padding bottom */
-.pb-1 {padding-bottom: 1rem}
-.pb-2 {padding-bottom: 2rem}
-.pb-3 {padding-bottom: 3rem}
+.pb-1 {
+    padding-bottom: 1rem
+}
+
+.pb-2 {
+    padding-bottom: 2rem
+}
+
+.pb-3 {
+    padding-bottom: 3rem
+}
 
 ::selection {
     color: var(--bg-color);
@@ -79,6 +104,20 @@ a {
     text-decoration: none;
 }
 
+.post-box {
+    position: relative;
+    overflow: hidden;
+}
+
+.post-box .post-img {
+    transition: filter 0.3s ease;
+}
+
+.post-box .post-img:hover {
+    filter: brightness(50%);
+    /* background-color: rgba(39, 174, 96, 0.5); */
+}
+
 .post-box a:hover {
     color: var(--hover-color);
 }
@@ -95,7 +134,8 @@ section {
     padding: 3rem 0 2rem;
 }
 
-.post-content p, ul {
+.post-content p,
+ul {
     padding-bottom: 1rem;
 }
 
@@ -152,12 +192,14 @@ header.shadow .logo {
     border-radius: 0.25rem;
     font-weight: 500;
     text-transform: uppercase;
-    transition: 0.3s; /* Add transition for smooth effect */
+    transition: 0.3s;
+    /* Add transition for smooth effect */
 }
 
 .btn:hover {
     background: hsl(145, 98%, 58%);
-    color: white; /* Change text color on hover */
+    color: white;
+    /* Change text color on hover */
     transition: 0.3s;
 }
 
@@ -232,7 +274,7 @@ header.shadow .logo {
 }
 
 .category {
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     color: var(--second-color);
     text-transform: uppercase;
     font-weight: 500;
@@ -250,7 +292,7 @@ header.shadow .logo {
 }
 
 .post-date {
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     color: var(--second-color);
     font-weight: 500;
     display: flex;
@@ -285,23 +327,27 @@ header.shadow .logo {
 }
 
 .profile-name {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     font-weight: 600;
 }
 
 .footer-home {
     display: flex;
     align-items: center;
-    justify-content: center; /* Center horizontally */
-    flex-direction: column; /* Place items vertically */
+    justify-content: center;
+    /* Center horizontally */
+    flex-direction: column;
+    /* Place items vertically */
     padding: 30px 0;
-    text-align: center; /* Center text horizontally */
+    text-align: center;
+    /* Center text horizontally */
 }
 
 .footer-post {
     display: flex;
     align-items: center;
-    justify-content: center; /* Center horizontally */
+    justify-content: center;
+    /* Center horizontally */
     padding: 30px 0;
 }
 
