@@ -275,9 +275,13 @@ header.shadow .logo {
 
 .category {
     font-size: 0.6rem;
-    color: var(--second-color);
+    color: var(--bg-color);
+    text-align: center;
     text-transform: uppercase;
     font-weight: 500;
+    background: var(--second-color);
+    width: 3rem;
+    border-radius: 2rem;
 }
 
 .post-title {
