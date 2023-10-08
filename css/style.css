@@ -175,14 +175,25 @@ span {
     color: var(--second-color);
 }
 
-header.shadow .logo {
+header.shadow .logo-name {
     color: var(--text-color);
 }
 
-.logo {
+.logo-container{
+    display: flex;
+    align-items: center;
+
+}
+
+.logo-name {
     font-size: 1.5rem;
     font-weight: 600;
     color: var(--bg-color);
+}
+
+.logo {
+    width: 1.5rem;
+    height: auto;
 }
 
 .btn {
