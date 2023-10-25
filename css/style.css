@@ -97,7 +97,7 @@
 code {
     font-family: Consolas, "Courier New", monospace;
     color: var(--code-color);
-}
+} 
 
 
 a {
@@ -301,7 +301,7 @@ header.shadow .logo-name {
     color: var(--text-color);
     /* text-overflow: ellipsis to truncate text to 2 lines; */
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
