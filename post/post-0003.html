@@ -12,6 +12,10 @@
   <!-- CSS FILE LINK  -->
   <link rel="stylesheet" href="../css/style.css">
 
+  <!-- Sythax Highlighting Style Sheet from highlightjs -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/tokyo-night-dark.min.css">
+
   <!-- FAVICON -->
   <link rel="icon" href="../favicon.ico" type="image/x-icon">
 </head>
@@ -67,101 +71,52 @@
       Arch Linux system and be able to also use it to manage MySQL Database.</p>
 
     <h2>Step 1: System Upgrade</h2>
-    <p>Before you begin, ensure your system is up to date by running the following command:</p>
+    <li>Before you begin, ensure your system is up to date by running the following command:</li>
 
-    <div class="code-block pb-1">
-      <div class="code-container">
-        <code>
-          sudo pacman -Syu
-        </code>
-        <button class="copy-button" onclick="copyToClipboard()">
-          Copy
-        </button>
-      </div>
-    </div>
+    <pre style="tab-size: 4">
+      <code class="language-shell" id="code-bar">sudo pacman -Syu</code>
+    </pre>
 
     <h2>Step 2: Installing MariaDB</h2>
-    <p>Now, let's install MariaDB:</p>
+    <li>Now, let's install MariaDB:</li>
 
-    <div class="code-block pb-1">
-      <div class="code-container">
-        <code>
-          sudo pacman -S mariadb
-        </code>
-        <button class="copy-button" onclick="copyToClipboard()">
-          Copy
-        </button>
-      </div>
-    </div>
+    <pre style="tab-size: 4">
+      <code class="language-shell" id="code-bar">sudo pacman -S mariadb</code>
+    </pre>
 
     <h2>Step 3: Initializing MariaDB</h2>
-    <p>Initialize the MariaDB data directory using the following command:</p>
+    <li>Initialize the MariaDB data directory using the following command:</li>
 
-    <div class="code-block pb-1">
-      <div class="code-container">
-        <code>
-          mariadb-install-db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
-        </code>
-        <button class="copy-button" onclick="copyToClipboard()">
-          Copy
-        </button>
-      </div>
-    </div>
+    <pre style="tab-size: 4">
+      <code class="language-shell" id="code-bar">mariadb-install-db --user=mysql --basedir=/usr --datadir=/var/lib/mysql</code>
+    </pre>
 
     <h2>Step 4: Starting and Managing MariaDB</h2>
-    <p>To start the MariaDB server:</p>
+    <li>To start the MariaDB server:</li>
 
-    <div class="code-block pb-1">
-      <div class="code-container">
-        <code>
-          sudo systemctl start mariadb
-        </code>
-        <button class="copy-button" onclick="copyToClipboard()">
-          Copy
-        </button>
-      </div>
-    </div>
+    <pre style="tab-size: 4">
+      <code class="language-shell" id="code-bar">sudo systemctl start mariadb</code>
+    </pre>
 
-    <p>To stop it:</p>
+    <li>To stop it:</li>
 
-    <div class="code-block pb-1">
-      <div class="code-container">
-        <code>
-          sudo systemctl stop mariadb
-        </code>
-        <button class="copy-button" onclick="copyToClipboard()">
-          Copy
-        </button>
-      </div>
-    </div>
+    <pre style="tab-size: 4">
+      <code class="language-shell" id="code-bar">sudo systemctl stop mariadb</code>
+    </pre>
 
-    <p>To enable MariaDB to start at boot:</p>
+    <li>To enable MariaDB to start at boot:</li>
 
-    <div class="code-block pb-1">
-      <div class="code-container">
-        <code>
-          sudo systemctl enable mariadb
-        </code>
-        <button class="copy-button" onclick="copyToClipboard()">
-          Copy
-        </button>
-      </div>
-    </div>
+    <pre style="tab-size: 4">
+      <code class="language-shell" id="code-bar">sudo systemctl enable mariadb</code>
+    </pre>
 
     <h2>Step 5: Securing Your MariaDB Installation</h2>
     <ol>
       <li>Run <code>mariadb-secure-installation</code> to secure your installation:</li>
 
-      <div class="code-block pb-1">
-        <div class="code-container">
-          <code>
-            sudo mariadb-secure-installation
-          </code>
-          <button class="copy-button" onclick="copyToClipboard()">
-            Copy
-          </button>
-        </div>
-      </div>
+      <pre style="tab-size: 4">
+        <code class="language-shell" id="code-bar">sudo mariadb-secure-installation</code>
+      </pre>
 
       <li>You'll be prompted to set a new root password, remove anonymous users, disallow remote root login, and remove
         the test database. Follow the on-screen instructions.</li>
@@ -171,173 +126,101 @@
     <ol>
       <li>Log into the MariaDB command-line interface as the root user:</li>
 
-      <div class="code-block pb-1">
-        <div class="code-container">
-          <code>
-            sudo mariadb
-          </code>
-          <button class="copy-button" onclick="copyToClipboard()">
-            Copy
-          </button>
-        </div>
-      </div>
+      <pre style="tab-size: 4">
+        <code class="language-shell" id="code-bar">sudo mariadb</code>
+      </pre>
 
       <li>Create a new user, replacing <code>userName</code> and <code>yourPassword</code> with your desired
         credentials:</li>
 
-      <div class="code-block pb-1">
-        <div class="code-container">
-          <code>
-            CREATE USER 'userName'@'localhost' IDENTIFIED BY 'yourPassword';
-          </code>
-          <button class="copy-button" onclick="copyToClipboard()">
-            Copy
-          </button>
-        </div>
-      </div>
+      <pre style="tab-size: 4">
+        <code class="language-sql" id="code-bar">CREATE USER 'userName'@'localhost' IDENTIFIED BY 'yourPassword';</code>
+      </pre>
 
       <li>Grant all privileges to the new user, replacing <code>userName</code>:</li>
 
-      <div class="code-block pb-1">
-        <div class="code-container">
-          <code>
-            GRANT ALL PRIVILEGES ON *.* TO 'userName'@'localhost' WITH GRANT OPTION;
-          </code>
-          <button class="copy-button" onclick="copyToClipboard()">
-            Copy
-          </button>
-        </div>
-      </div>
+      <pre style="tab-size: 4">
+        <code class="language-sql" id="code-bar">GRANT ALL PRIVILEGES ON *.* TO 'userName'@'localhost' WITH GRANT OPTION;</code>
+      </pre>
 
       <li>Flush privileges and exit the MariaDB client:</li>
 
-      <div class="code-block pb-1">
-        <div class="code-container">
-          <code>
-            FLUSH PRIVILEGES;
-            exit
-          </code>
-          <button class="copy-button" onclick="copyToClipboard()">
-            Copy
-          </button>
-        </div>
-      </div>
+      <pre style="tab-size: 4">
+        <code class="language-sql" id="code-bar">FLUSH PRIVILEGES; exit</code>
+      </pre>
+
 
       <li>Log in with the newly created user (if needed):</li>
 
-      <div class="code-block pb-1">
-        <div class="code-container">
-          <code>
-            mariadb -u userName -p
-          </code>
-          <button class="copy-button" onclick="copyToClipboard()">
-            Copy
-          </button>
-        </div>
-      </div>
+      <pre style="tab-size: 4">
+        <code class="language-shell" id="code-bar">mariadb -u userName -p</code>
+      </pre>
 
       <li>Create a new database:</li>
 
-      <div class="code-block pb-1">
-        <div class="code-container">
-          <code>
-            CREATE DATABASE yourDatabaseName;
-          </code>
-          <button class="copy-button" onclick="copyToClipboard()">
-            Copy
-          </button>
-        </div>
-      </div>
+      <pre style="tab-size: 4">
+        <code class="language-sql" id="code-bar">CREATE DATABASE yourDatabaseName;</code>
+      </pre>
 
       <li>To view available databases:</li>
-      <div class="code-block pb-1">
-        <div class="code-container">
-          <code>
-            SHOW DATABASES;
-          </code>
-          <button class="copy-button" onclick="copyToClipboard()">
-            Copy
-          </button>
-        </div>
-      </div>
-    </ol>
 
-    <h2>Deleting a Database</h2>
-    <ol>
-      <li>Log into the MariaDB command-line interface:</li>
+      <pre style="tab-size: 4">
+        <code class="language-sql" id="code-bar">SHOW DATABASES;</code>
+      </pre>
 
-      <div class="code-block pb-1">
-        <div class="code-container">
-          <code>
-            sudo mariadb
-          </code>
-          <button class="copy-button" onclick="copyToClipboard()">
-            Copy
-          </button>
-        </div>
-      </div>
+      <h2>Deleting a Database</h2>
+      <ol>
+        <li>Log into the MariaDB command-line interface:</li>
+        <pre style="tab-size: 4">
+          <code class="language-shell" id="code-bar">sudo mariadb</code>
+        </pre>
 
-      <li>Delete a user using the <code>DROP USER</code> statement, replacing <code>userName</code>:</li>
+        <li>Delete a user using the <code>DROP USER</code> statement, replacing <code>userName</code>:</li>
 
-      <div class="code-block pb-1">
-        <div class="code-container">
-          <code>
-            DROP USER 'userName'@'localhost';
-          </code>
-          <button class="copy-button" onclick="copyToClipboard()">
-            Copy
-          </button>
-        </div>
-      </div>
+        <pre style="tab-size: 4">
+          <code class="language-sql" id="code-bar">DROP USER 'userName'@'localhost';</code>
+        </pre>
 
-      <li>After running the <code>DROP USER</code> command, flush the privileges:</li>
+        <li>After running the <code>DROP USER</code> command, flush the privileges:</li>
 
-      <div class="code-block pb-1">
-        <div class="code-container">
-          <code>
-            FLUSH PRIVILEGES;
-          </code>
-          <button class="copy-button" onclick="copyToClipboard()">
-            Copy
-          </button>
-        </div>
-      </div>
+        <pre style="tab-size: 4">
+          <code class="language-sql" id="code-bar">FLUSH PRIVILEGES;</code>
+        </pre>
 
-      <li>Exit the MariaDB command-line interface:</li>
+        <li>Exit the MariaDB command-line interface:</li>
 
-      <div class="code-block pb-1">
-        <div class="code-container">
-          <code>
-            exit
-          </code>
-          <button class="copy-button" onclick="copyToClipboard()">
-            Copy
-          </button>
-        </div>
-      </div>
+        <pre style="tab-size: 4">
+          <code class="language-sql" id="code-bar">exit</code>
+        </pre>
 
-      <p>Please use these commands with caution, as they are irreversible. Ensure you are deleting
-        the correct user
-        before proceeding.</p>
+        <p>Please use these commands with caution, as they are irreversible. Ensure you are deleting
+          the correct user
+          before proceeding.</p>
 
-      <h2>To Wrap It Up</h2>
+        <h2>To Wrap It Up</h2>
 
-      <p>Installing and managing MariaDB on Arch Linux can be a straightforward process when you have the
-        right guidance. By following the steps outlined in this guide, you can ensure that your MariaDB installation is
-        up to date, secure, and tailored to your specific needs. From initializing the database to creating and managing
-        users</p>
+        <p>Installing and managing MariaDB on Arch Linux can be a straightforward process when you have the
+          right guidance. By following the steps outlined in this guide, you can ensure that your MariaDB installation
+          is
+          up to date, secure, and tailored to your specific needs. From initializing the database to creating and
+          managing
+          users</p>
 
-      <p> It's important to keep in mind that MariaDB is a powerful database management system, and it can serve a wide
-        range of applications, from personal projects to enterprise-level solutions. With the knowledge gained from this
-        guide, you are better equipped to harness the capabilities of MariaDB and make it work seamlessly within your
-        Arch Linux system.</p>
+        <p> It's important to keep in mind that MariaDB is a powerful database management system, and it can serve a
+          wide
+          range of applications, from personal projects to enterprise-level solutions. With the knowledge gained from
+          this
+          guide, you are better equipped to harness the capabilities of MariaDB and make it work seamlessly within your
+          Arch Linux system.</p>
 
-      <p>As you continue your journey with MariaDB, remember to stay updated with best practices and security measures,
-        and always exercise caution when making irreversible changes, such as deleting users or databases. With this
-        newfound understanding, you can confidently use MariaDB to store, retrieve, and manage your data effectively on
-        your Arch Linux system.</p>
+        <p>As you continue your journey with MariaDB, remember to stay updated with best practices and security
+          measures,
+          and always exercise caution when making irreversible changes, such as deleting users or databases. With this
+          newfound understanding, you can confidently use MariaDB to store, retrieve, and manage your data effectively
+          on
+          your Arch Linux system.</p>
 
-      <!-- ------------------------------------------ Ends -->
+        <!-- ------------------------------------------ Ends -->
 
   </section>
 
@@ -355,6 +238,9 @@
 
   <!-- JQUERY CDN LINK  -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <!-- Synthax Highlight Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
 
   <!-- CUSTOM JS FILE LINK  -->
   <script type="module" src="../js/main.js"></script>

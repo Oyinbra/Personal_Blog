@@ -1,7 +1,6 @@
 /* Import Google fonts */
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;1,200&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;3081400;500;690;788;800;900cdisplay=swap");
 
 /* To change the text selector */
 :root {
@@ -9,7 +8,6 @@
     --container-color: #1a1e21;
     --text-color: #172317;
     --bg-color: #fff;
-    --hover-color: #0000FF;
     --code-color: #e74c3c;
 }
 
@@ -67,38 +65,24 @@
     font-family: 'Poppins', sans-serif;
 }
 
-/* Style for the code block container */
-.code-container {
+pre {
+    overflow: hidden;
+    display: flex;
     position: relative;
     border: 1px solid #ccc;
-    background-color: #f7f7f7;
-    padding: 10px;
-    border-radius: 4px;
-}
-
-/* Style for the code inside the code block */
-.code-container code {
-    color: #333;
-}
-
-/* Style for the copy button */
-.copy-button {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    background-color: #333;
-    color: #fff;
-    padding: 5px 10px;
-    border: none;
-    cursor: pointer;
-    border-radius: 1.5rem;
+    background-color: #1a1b26;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
 }
 
 code {
-    font-family: Consolas, "Courier New", monospace;
+    border-radius: 0.5rem;
     color: var(--code-color);
-} 
+}
 
+#code-bar{
+    color: #9aa5ce;
+}
 
 a {
     text-decoration: none;
@@ -119,7 +103,7 @@ a {
 }
 
 .post-box a:hover {
-    color: var(--hover-color);
+    color: var(--second-color);
 }
 
 li {
@@ -179,7 +163,7 @@ header.shadow .logo-name {
     color: var(--text-color);
 }
 
-.logo-container{
+.logo-container {
     display: flex;
     align-items: center;
 

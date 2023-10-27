@@ -12,6 +12,10 @@
   <!-- CSS FILE LINK  -->
   <link rel="stylesheet" href="../css/style.css">
 
+  <!-- Sythax Highlighting Style Sheet from highlightjs -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/tokyo-night-dark.min.css">
+
   <!-- FAVICON -->
   <link rel="icon" href="../favicon.ico" type="image/x-icon">
 </head>
@@ -72,7 +76,6 @@
       seem intimidating at first, but once you get the hang of it, you'll wonder how you ever lived without it. Here are
       some key benefits:</p>
 
-    <ul>
       <li><strong>Speed and Efficiency:</strong>
         <ul>
           <li>Execute commands quickly with just a few keystrokes.</li>
@@ -92,7 +95,6 @@
           <li>Manage servers, databases, and code repositories with ease.</li>
         </ul>
       </li>
-    </ul>
 
     <h3>Getting Started with the Terminal</h3>
 
@@ -123,10 +125,12 @@
         <code>nano</code>, <code>vim</code>,
         or any text editor you prefer.
       </li>
-      <li>Add your aliases in the following format at the end of the file:
-        <pre><code>alias alias_name='command_to_be_aliased'</code></pre>
+      <li class="pt-1">Add your aliases in the following format at the end of the file:
+        <pre style="tab-size: 4">
+          <code id="code-bar">alias alias_name='command_to_be_aliased'</code>
+        </pre>        
         For example, to create an alias for clearing the terminal screen:
-        <pre><code>alias cls='clear'</code></pre>
+        <pre><code id="code-bar">alias cls='clear'</code></pre>
       </li>
     </ol>
 
@@ -134,7 +138,7 @@
       <code>.zshrc</code> from the terminal using <code>source ~/path/to/file</code>
     </p>
 
-    <h4 class="pt-1">Using Aliases:</h4>
+    <h4>Using Aliases:</h4>
 
     <p>To use an alias, simply type the alias name in the terminal. For our example, typing <code>cls</code> will clear
       the screen. You can create aliases for frequently used commands, directories, or even complex command sequences.
@@ -144,43 +148,20 @@
 
     <p>Here are some examples of aliases that can improve your coding experience:</p>
 
-    <div class="code-block-container">
-      <div class="code-block pb-1">
-        <h4>Alias for navigating to your project directory:</h4>
-        <div class="code-container">
-          <code>
-            alias proj='cd ~/path/to/your/project'
-          </code>
-          <button class="copy-button" onclick="copyToClipboard()">
-            Copy
-          </button>
-        </div>
-      </div>
-
-      <div class="code-block pb-1">
-        <h4>Alias for running a Python script:</h4>
-        <div class="code-container">
-          <code>
-            alias py='python3 ~/path/to/script.py'
-          </code>
-          <button class="copy-button" onclick="copyToClipboard()">
-            Copy
-          </button>
-        </div>
-      </div>
-
-      <div class="code-block pb-1">
-        <h4>Alias for updating system packages in Arch Linux:</h4>
-        <div class="code-container">
-          <code>
-            alias updatesys='sudo pacman -Syu'
-          </code>
-          <button class="copy-button" onclick="copyToClipboard()">
-            Copy
-          </button>
-        </div>
-      </div>
-    </div>
+    <h4>Alias for navigating to your project directory:</h4>
+    <pre style="tab-size: 4">
+      <code id="code-bar">alias proj='cd ~/path/to/your/project'</code>
+    </pre>
+    
+    <h4>Alias for running a Python script:</h4>
+    <pre style="tab-size: 4">
+      <code id="code-bar">alias py='python3 ~/path/to/script.py'</code>
+    </pre>
+    
+    <h4>Alias for updating system packages in Arch Linux:</h4>
+    <pre style="tab-size: 4">
+      <code id="code-bar">alias updatesys='sudo pacman -Syu'</code>
+    </pre>    
 
     <h3>To Wrap It Up</h3>
 
@@ -210,6 +191,9 @@
 
   <!-- JQUERY CDN LINK  -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <!-- Synthax Highlight Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
 
   <!-- CUSTOM JS FILE LINK  -->
   <script type="module" src="../js/main.js"></script>
