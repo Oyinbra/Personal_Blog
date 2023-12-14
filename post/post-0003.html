@@ -88,7 +88,8 @@
     <li>Initialize the MariaDB data directory using the following command:</li>
 
     <pre style="tab-size: 4">
-      <code class="language-shell" id="code-bar">mariadb-install-db --user=mysql --basedir=/usr --datadir=/var/lib/mysql</code>
+      <code class="language-shell" id="code-bar">sudo mariadb-install-db --user=mysql --basedir=/usr
+        --datadir=/var/lib/mysql</code>
     </pre>
 
     <h2>Step 4: Starting and Managing MariaDB</h2>
@@ -140,7 +141,8 @@
       <li>Grant all privileges to the new user, replacing <code>userName</code>:</li>
 
       <pre style="tab-size: 4">
-        <code class="language-sql" id="code-bar">GRANT ALL PRIVILEGES ON *.* TO 'userName'@'localhost' WITH GRANT OPTION;</code>
+        <code class="language-sql" id="code-bar">GRANT ALL PRIVILEGES ON *.* TO 'userName'@'localhost' WITH GRANT
+          OPTION;</code>
       </pre>
 
       <li>Flush privileges and exit the MariaDB client:</li>
@@ -168,7 +170,9 @@
         <code class="language-sql" id="code-bar">SHOW DATABASES;</code>
       </pre>
 
-      <h2>Deleting a Database</h2>
+      <h2>Deleting a user</h2>
+      <p>If you created a user by mistake which i did and you want to remove it, you can use the following commands to
+        delete the user:</p>
       <ol>
         <li>Log into the MariaDB command-line interface:</li>
         <pre style="tab-size: 4">
